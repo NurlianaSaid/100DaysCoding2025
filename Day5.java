@@ -5,7 +5,7 @@ public class Day5 {
 
 System.out.println("Nota Harga Jualan yang Laku...");
 int harga_tas = 200000;
-short jumlah = 5;
+short jumlah = 50;
 byte berat = 2;
 long total = (harga_tas)* jumlah;
        System.out.println("Harga Tas = " + harga_tas);
