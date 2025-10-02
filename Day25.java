@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class decrement {
+
+public class day25 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -13,8 +14,8 @@ public class decrement {
         System.out.println("Nilai y (pre-increment) = " + y);
         System.out.println("Nilai x setelah pre-increment = " + x);
 
-       // x = input.nextInt(); // Reset nilai x
-        System.out.print("Masukkan Nilai X = ");
+        System.out.print("Masukkan Nilai X baru = ");
+        x = input.nextInt(); // Reset nilai x
         System.out.println("Nilai x awal = " + x);
 
         int z = x++; // Post-Increment
@@ -31,7 +32,8 @@ public class decrement {
         System.out.println("Nilai b (pre-decrement) = " + b);
         System.out.println("Nilai a setelah pre-decrement = " + a);
 
-        //a = input.nextInt(); // Reset nilai a
+        System.out.print("Masukkan nilai a baru = ");
+        a = input.nextInt(); // Reset nilai a
         System.out.println("Nilai a awal = " + a);
 
         int c = a--; // Post-Decrement
