@@ -8,6 +8,6 @@ public class lianaku {
         int b = in.nextInt();
         System.out.println("Nama saya adalah: "+a);
         System.out.print("Umur saya adalah : "+b+"\n");
-        System.out.printf("Umur anda %d tahun",(b+5));
+        System.out.printf("Umur saya 5 tahun ke depan adalah  %d tahun",(b+5));
     }
 }
