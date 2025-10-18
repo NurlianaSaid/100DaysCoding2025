@@ -11,8 +11,8 @@ public class evaluasi2 {
         int b = in.nextInt();
         System.out.println("==============================================");
         
-        System.out.println("Nilai teori \t:" +a);
-        System.out.println("Nilai praktik \t:"+b);
+        System.out.println("Nilai Teori \t:" +a);
+        System.out.println("Nilai Praktik \t:"+b);
         
         String predikat = "";
         String keterangan = "";
