@@ -5,9 +5,9 @@ public class evaluasi2 {
         Scanner in = new Scanner(System.in);
         
         System.out.println("=== Program Evaluasi Mentor ===");
-        System.out.print("Masukkan nilai teori \t:");
+        System.out.print("Masukkan nilai teori = ");
         int a = in.nextInt();
-        System.out.print("Masukkan nilai praktik \t:");
+        System.out.print("Masukkan nilai praktik = ");
         int b = in.nextInt();
         System.out.println("==============================================");
         
