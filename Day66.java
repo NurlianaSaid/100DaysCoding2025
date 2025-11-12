@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class bintangVertikal {
+    
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Masukkan angka : ");
+        int a = in.nextInt();
+        for(int i = 0; i< a ; i++){
+            System.out.println("*");
+        }
+    }
+    
+}
