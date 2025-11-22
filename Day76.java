@@ -1,57 +1,88 @@
-package latihanArray;
+package latihan;
 
 import java.util.Scanner;
 
-public class LatihanLengkap {
+public class day76 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
 
-        String[] data = new String[5];
+        String[] nama = new String[5];
 
-        // Mengisi array
-        for (int i = 0; i < data.length; i++) {
-            System.out.print("Masukkan kata ke-" + (i+1) + ": ");
-            data[i] = input.nextLine();
+        // INPUT
+        for (int i = 0; i < nama.length; i++) {
+            System.out.print("Nama : ");
+            nama[i] = in.nextLine();
         }
 
-        System.out.println("\n=== PENGECEKAN ===");
+        // ================================
+        // CEK ELEMEN KOSONG (isEmpty)
+        // ================================
+        System.out.println("\nCek elemen kosong (isEmpty)");
+        boolean kosong = false;
 
-        // 1. isEmpty → cek apakah ada elemen yang kosong
-        System.out.println("\nCek elemen kosong (isEmpty):");
-        for (int i = 0; i < data.length; i++) {
-            if (data[i].isEmpty()) {
-                System.out.println("Index " + i + " kosong!");
+        for (int i = 0; i < nama.length; i++) {
+            if (nama[i].isEmpty()) {
+                System.out.println("Index " + i + " kosong");
+                kosong = true;
             }
         }
 
-        // 2. equals → mencari kata yang sama persis
-        System.out.print("\nCari kata (equals): ");
-        String cariExact = input.nextLine();
+        if (!kosong) {
+            System.out.println("Semua index terisi!");
+        }
 
-        for (String d : data) {
-            if (d.equals(cariExact)) {
+        // ================================
+        // equals
+        // ================================
+        System.out.println("\nCari kata (equals)");
+        System.out.print("Masukkan nama : ");
+        String cari1 = in.nextLine();
+
+        boolean ditemukan1 = false;
+        for (String d : nama) {
+            if (d.equals(cari1)) {
                 System.out.println("Ditemukan kata yang sama persis: " + d);
+                ditemukan1 = true;
             }
         }
-
-        // 3. equalsIgnoreCase → mencari tanpa peduli huruf besar kecil
-        System.out.print("\nCari kata (equalsIgnoreCase): ");
-        String cariCase = input.nextLine();
-
-        for (String d : data) {
-            if (d.equalsIgnoreCase(cariCase)) {
-                System.out.println("Ditemukan tanpa lihat huruf besar-kecil: " + d);
-            }
+        if (!ditemukan1) {
+            System.out.println("Tidak ada yang sama persis.");
         }
 
-        // 4. contains → cari kata yang ada di dalam teks
-        System.out.print("\nCari kata yang mengandung (contains): ");
-        String cariBagian = input.nextLine();
+        // ================================
+        // equalsIgnoreCase
+        // ================================
+        System.out.println("\nCari kata (equalsIgnoreCase)");
+        System.out.print("Masukkan nama : ");
+        String cari2 = in.nextLine();
 
-        for (String d : data) {
-            if (d.contains(cariBagian)) {
-                System.out.println("Ditemukan kata yang mengandung '" + cariBagian + "': " + d);
+        boolean ditemukan2 = false;
+        for (String d : nama) {
+            if (d.equalsIgnoreCase(cari2)) {
+                System.out.println("Ditemukan tanpa lihat huruf besar/kecil: " + d);
+                ditemukan2 = true;
             }
+        }
+        if (!ditemukan2) {
+            System.out.println("Tidak ada kata yang cocok (ignore case).");
+        }
+
+        // ================================
+        // contains
+        // ================================
+        System.out.println("\nCari elemen dalam kata (contains)");
+        System.out.print("Masukkan kata : ");
+        String kata = in.nextLine();
+
+        boolean ditemukan3 = false;
+        for (String d : nama) {
+            if (d.contains(kata)) {
+                System.out.println("Ada kata yang mengandung '" + kata + "': " + d);
+                ditemukan3 = true;
+            }
+        }
+        if (!ditemukan3) {
+            System.out.println("Tidak ada kata yang mengandung itu.");
         }
     }
 }
